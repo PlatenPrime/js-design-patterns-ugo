@@ -1,0 +1,55 @@
+{
+  "name": "javascript-design-patterns",
+  "private": true,
+  "version": "1.0.0",
+  "description": "JavaScript Design Patterns published by Packt",
+  "type": "module",
+  "scripts": {
+    "start": " node ./run.test.js",
+    "dev": " node --watch ./run.test.js",
+    "test": "node --test",
+    "ch1": "npm start Chapter01",
+    "ch2": "npm start Chapter02",
+    "ch3": "npm start Chapter03",
+    "ch4": "npm --prefix Chapter04 run dev",
+    "ch5:react-rendering": "npm --prefix Chapter05/react-rendering-strategies run serve",
+    "ch5:next-static": "npm --prefix Chapter05/next-static-rendering run build && npm --prefix ch5/next-static-rendering run start",
+    "ch6:islands": "npm --prefix Chapter06/islands-is-land run dev",
+    "ch6:zones": "npm --prefix Chapter06/next-zones run dev",
+    "ch7": "npm start Chapter07",
+    "ch8": "npm --prefix Chapter08 run dev",
+    "ch9:dynamic-import": "npm --prefix Chapter09/dynamic-import-vite run dev",
+    "ch9:next-script": "npm --prefix Chapter09/next-route-based-splitting run dev",
+    "ch10:asset-load": "npm --prefix Chapter10/asset-load-attributes run dev",
+    "ch10:next-script": "npm --prefix Chapter10/next-script-strategy run dev",
+    "format": "prettier --write ."
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "author": "Hugo Di Francesco",
+  "devDependencies": {
+    "@babel/parser": "7.23.3",
+    "@babel/traverse": "7.23.3",
+    "@pollyjs/adapter-fetch": "6.0.6",
+    "@pollyjs/cli": "6.0.6",
+    "@pollyjs/core": "6.0.6",
+    "@pollyjs/persister-fs": "6.0.6",
+    "cross-env": "^7.0.3",
+    "jwt-decode": "3.1.2",
+    "prettier": "3.0.3"
+  },
+  "workspaces": [
+    ".",
+    "./Chapter04",
+    "./Chapter05/*",
+    "./Chapter06/*",
+    "./Chapter06/next-zones/*",
+    "./Chapter08",
+    "./Chapter09/*",
+    "./Chapter10/*"
+  ],
+  "dependencies": {
+    "@pollyjs/persister-rest": "^6.0.6"
+  }
+}

@@ -1,6 +1,6 @@
 class MySingleton {
-    constructor(value) {
-      this.value = value;
-    }
+  constructor(value) {
+    this.value = value;
   }
-  export default new MySingleton('my-value');
+}
+export default new MySingleton('my-value');
